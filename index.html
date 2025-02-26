@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var humanScore = 0;
+        var computerScore;
+        function getComputerChoice(){
+            let cpuprob = Math.random();
+            if (cpuprob <= 0.33){
+                return 0;
+            }
+            else if (cpuprob <= 0.66 && cpuprob > 0.33){
+                return 1;
+            }
+            else if (cpuprob < 1 && cpuprob > 0.66){
+                return 2;
+            }
+        } 
+
+        function getHumanChoice(){
+            let humanChoice = prompt("Please enter your choice (Rock, Paper, Scissors)").toLowerCase();
+            if (humanChoice === "rock"){
+                return 0;
+            } 
+            else if (humanChoice === "paper"){
+                return 1;
+            } 
+
+            else if (humanChoice === "scissors"){
+                return 2;
+            } 
+            else{
+                console.log("Invalid input!");
+            }
+        }
+        console.log(getHumanChoice());
+        
+    </script>
+</body>
+</html>
