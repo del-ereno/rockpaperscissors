@@ -1,0 +1,58 @@
+[33mcommit 6f445f74cf1c31f7f213f22e7e6f5a966617de3e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: del-ereno <delereno@gmail.com>
+Date:   Wed Feb 26 23:46:41 2025 +1300
+
+    human cpu choice functions coded
+
+[1mdiff --git a/index.html b/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fda558f[m
+[1m--- /dev/null[m
+[1m+++ b/index.html[m
+[36m@@ -0,0 +1,45 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Document</title>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <script>[m
+[32m+[m[32m        var humanScore = 0;[m
+[32m+[m[32m        var computerScore;[m
+[32m+[m[32m        function getComputerChoice(){[m
+[32m+[m[32m            let cpuprob = Math.random();[m
+[32m+[m[32m            if (cpuprob <= 0.33){[m
+[32m+[m[32m                return 0;[m
+[32m+[m[32m            }[m
+[32m+[m[32m            else if (cpuprob <= 0.66 && cpuprob > 0.33){[m
+[32m+[m[32m                return 1;[m
+[32m+[m[32m            }[m
+[32m+[m[32m            else if (cpuprob < 1 && cpuprob > 0.66){[m
+[32m+[m[32m                return 2;[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m[41m [m
+[32m+[m
+[32m+[m[32m        function getHumanChoice(){[m
+[32m+[m[32m            let humanChoice = prompt("Please enter your choice (Rock, Paper, Scissors)").toLowerCase();[m
+[32m+[m[32m            if (humanChoice === "rock"){[m
+[32m+[m[32m                return 0;[m
+[32m+[m[32m            }[m[41m [m
+[32m+[m[32m            else if (humanChoice === "paper"){[m
+[32m+[m[32m                return 1;[m
+[32m+[m[32m            }[m[41m [m
+[32m+[m
+[32m+[m[32m            else if (humanChoice === "scissors"){[m
+[32m+[m[32m                return 2;[m
+[32m+[m[32m            }[m[41m [m
+[32m+[m[32m            else{[m
+[32m+[m[32m                console.log("Invalid input!");[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+[32m+[m[32m        console.log(getHumanChoice());[m
+[32m+[m[41m        [m
+[32m+[m[32m    </script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
