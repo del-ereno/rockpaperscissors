@@ -1,16 +1,23 @@
-
-
-
 function playGame(){
     //initialising score variables
     var humanScore = 0;
     var computerScore = 0;
 
+    const resultsContainer = document.querySelector("#results");
+    const results = document.createElement("h1");
+    results.textContent = "Player: 0 Opponent: 0";
+    resultsContainer.appendChild(results);
+
     //button listeners
     const buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
-            playRound(button.id, getComputerChoice())
+            if (humanScore != 5 && computerScore != 5){
+                playRound(button.id, getComputerChoice())
+            }
+            else{
+                alert("Game is already over!");
+            }
         });
     });
     
@@ -32,9 +39,16 @@ function playGame(){
         alert("Invalid Input!");
     }
 
-    function updateScore(){
-
-        div.textContent = "Player: " + humanScore + " Opponent:" + computerScore;
+    function updateScoreboard(){
+        results.textContent = "Player: " + humanScore + " Opponent:" + computerScore;
+    }
+    function checkWin(){
+        if (humanScore === 5){
+            alert("You win the game!");
+        }
+        else if (computerScore === 5){
+            alert("Oh no! Your Opponent has won! You Lose!");
+        }
     }
 
     function getComputerChoice(){
