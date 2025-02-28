@@ -1,0 +1,24 @@
+
+.game {
+    padding: 400px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.gameButtons{
+    display: flex;
+    gap: 30px;
+}
+button{
+    padding: 8px 24px;
+    border:2px solid skyblue;
+    background-color:whitesmoke;
+    
+    border-radius: 9px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+

@@ -6,6 +6,7 @@ function playGame(){
     const resultsContainer = document.querySelector("#results");
     const results = document.createElement("h1");
     results.textContent = "Player: 0 Opponent: 0";
+    results.style.fontFamily = "Courier New";
     resultsContainer.appendChild(results);
 
     //button listeners
